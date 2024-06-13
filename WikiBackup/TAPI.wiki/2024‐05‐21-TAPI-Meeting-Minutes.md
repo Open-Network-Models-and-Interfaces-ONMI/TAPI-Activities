@@ -83,21 +83,21 @@ General update
 -------------------------------------------------------------------------------------
 **Discussion item 2**
 
-[Node - Device linkage](https://github.com/Open-Network-Models-and-Interfaces-ONMI/TAPI/discussions/583)
+[Node - Device linkage](https://github.com/Open-Network-Models-and-Interfaces-ONMI/TAPI/wiki/Discussion-%E2%80%90-Node-to-Device-linkage)
 
 10 mins
 
 -------------------------------------------------------------------------------------
 **Discussion item 3**
 
-[Definition of patterns for a description of model navigation - functional to consistency and compliance tests](https://github.com/Open-Network-Models-and-Interfaces-ONMI/TAPI/discussions/585)
+[Definition of patterns for a description of model navigation - functional to consistency and compliance tests](https://github.com/Open-Network-Models-and-Interfaces-ONMI/TAPI/wiki/Discussion-%E2%80%90-Patterns-for-a-description-of-model-navigation-%E2%80%90-functional-to-consistency-and-compliance-tests)
 
 20 mins
 
 -------------------------------------------------------------------------------------
 **Discussion item 4**
 
-[Use Case 11a: Modification of service path - Connection inclusion/exclusion constraints](https://github.com/Open-Network-Models-and-Interfaces-ONMI/TAPI/discussions/580)
+[Use Case 11a: Modification of service path - Connection inclusion/exclusion constraints](https://github.com/Open-Network-Models-and-Interfaces-ONMI/TAPI/wiki/Discussion-%E2%80%90-Use-Case-11a-%E2%80%90-Modification-of-service-path-%E2%80%90-Connection-inclusion-exclusion-constraints)
 
 30 mins
 

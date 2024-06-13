@@ -27,7 +27,7 @@ _TAPI team will at most agree recommendations, with final agreement postponed._
   + Update on Linux Foundation
   + Update on multi-SDO harmonization of Photonic Metrics
 - Review contribution
-  + https://github.com/OpenNetworkingFoundation/TAPI/blob/tapi-team-activities/TAPI-TEAM-ACTIVITIES/Contributions/TAPI_2.5.0_Review_26_02_2024.pptx
+  + https://github.com/OpenNetworkingFoundation/TAPI/blob/tapi-team-activities/TAPI-TEAM-ACTIVITIES/ContributionsForDiscussions/TAPI_2.5.0_Review_26_02_2024.pptx
 - Photonic Model: continue the fix/update of the transceiver provisioning model
 - Continue the discussion on digital payload of photonic media
 - Model for Multi-technology Network Interface
@@ -70,14 +70,14 @@ General update
 -------------------------------------------------------------------------------------
 **Discussion item 2**
 
-[Bugs, Patches](https://github.com/Open-Network-Models-and-Interfaces-ONMI/TAPI/discussions/579)
+[Bugs, Patches](https://github.com/Open-Network-Models-and-Interfaces-ONMI/TAPI/wiki/Discussion-%E2%80%90-Bugs,-Patches)
  
 45 mins
 
 -------------------------------------------------------------------------------------
 **Discussion item 3**
 
-[Transceiver Model](https://github.com/Open-Network-Models-and-Interfaces-ONMI/TAPI/discussions/578)
+[Transceiver Model](https://github.com/Open-Network-Models-and-Interfaces-ONMI/TAPI/wiki/Discussion-%E2%80%90-Transceiver-Model)
 
 45 mins
 

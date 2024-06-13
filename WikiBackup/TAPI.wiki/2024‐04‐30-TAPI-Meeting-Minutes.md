@@ -67,7 +67,7 @@ General update
 -------------------------------------------------------------------------------------
 **Discussion item 2**
 
-[2.6.0 plan](https://github.com/Open-Network-Models-and-Interfaces-ONMI/TAPI/discussions/573)
+[2.6.0 plan](https://github.com/Open-Network-Models-and-Interfaces-ONMI/TAPI/wiki/Discussion-%E2%80%90-Plan-for-next-release)
 
 50 mins
 

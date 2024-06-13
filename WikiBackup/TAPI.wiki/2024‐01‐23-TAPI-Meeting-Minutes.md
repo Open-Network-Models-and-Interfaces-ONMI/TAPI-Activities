@@ -45,7 +45,7 @@ General update
 -------------------------------------------------------------------------------------
 **Discussion item 2**
 
-[Path computation: Path as routing constraint](https://github.com/Open-Network-Models-and-Interfaces-ONMI/TAPI/discussions/577)
+[Path computation: Path as routing constraint](https://github.com/Open-Network-Models-and-Interfaces-ONMI/TAPI/wiki/Discussion-%E2%80%90-Path-computation-%E2%80%90-Path-as-routing-constraint)
 
 50 mins
 

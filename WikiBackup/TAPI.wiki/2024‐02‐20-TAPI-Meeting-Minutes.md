@@ -80,14 +80,14 @@ General update
 -------------------------------------------------------------------------------------
 **Discussion item 2**
 
-[Transceiver Model](https://github.com/Open-Network-Models-and-Interfaces-ONMI/TAPI/discussions/578)
+[Transceiver Model](https://github.com/Open-Network-Models-and-Interfaces-ONMI/TAPI/wiki/Discussion-%E2%80%90-Transceiver-Model)
 
 20 mins
 
 -------------------------------------------------------------------------------------
 **Discussion item 3**
 
-[Digital payload of photonic media - Model enhancements and generalizations](https://github.com/Open-Network-Models-and-Interfaces-ONMI/TAPI/discussions/575)
+[Digital payload of photonic media - Model enhancements and generalizations](https://github.com/Open-Network-Models-and-Interfaces-ONMI/TAPI/wiki/Discussion-%E2%80%90-Digital-payload-of-photonic-media-%E2%80%90-Model-enhancements-and-generalizations)
 
 40 mins
 

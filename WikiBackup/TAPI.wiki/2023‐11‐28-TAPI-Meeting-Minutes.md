@@ -46,7 +46,7 @@ General update
 
 **Discussion item 2**
 
-[Progress on digital payload of photonic media](https://github.com/Open-Network-Models-and-Interfaces-ONMI/TAPI/discussions/575)
+[Progress on digital payload of photonic media](https://github.com/Open-Network-Models-and-Interfaces-ONMI/TAPI/wiki/Discussion-%E2%80%90-Digital-payload-of-photonic-media-%E2%80%90-Model-enhancements-and-generalizations)
 
 60 mins
 

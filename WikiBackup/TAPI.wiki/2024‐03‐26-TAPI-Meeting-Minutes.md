@@ -69,9 +69,9 @@ General update
    + Esther, is there any LF recommendation / best practice?
      - Nigel, more likely to find recommendations in some specific project
 
-3) [2.5.0 Review: approve draft patches](https://github.com/Open-Network-Models-and-Interfaces-ONMI/TAPI/discussions/579)
+3) [2.5.0 Review: approve draft patches](https://github.com/Open-Network-Models-and-Interfaces-ONMI/TAPI/wiki/Discussion-%E2%80%90-Bugs,-Patches)
 
-4) [Proposal to close all issues older than 2023](https://github.com/Open-Network-Models-and-Interfaces-ONMI/TAPI/discussions/579)
+4) [Proposal to close all issues older than 2023](https://github.com/Open-Network-Models-and-Interfaces-ONMI/TAPI/wiki/Discussion-%E2%80%90-Bugs,-Patches)
 
 5) IETF 119 (https://www.ietf.org/how/meetings/119/)
    + Nigel provides a summary of the discussions which may concern TAPI
@@ -108,14 +108,14 @@ General update
 -------------------------------------------------------------------------------------
 **Discussion item 2**
 
-[Transceiver Model](https://github.com/Open-Network-Models-and-Interfaces-ONMI/TAPI/discussions/578)
+[Transceiver Model](https://github.com/Open-Network-Models-and-Interfaces-ONMI/TAPI/wiki/Discussion-%E2%80%90-Transceiver-Model)
 
 10 mins
 
 -------------------------------------------------------------------------------------
 **Discussion item 3**
 
-[Progress on digital payload of photonic media](https://github.com/Open-Network-Models-and-Interfaces-ONMI/TAPI/discussions/575)
+[Progress on digital payload of photonic media](https://github.com/Open-Network-Models-and-Interfaces-ONMI/TAPI/wiki/Discussion-%E2%80%90-Digital-payload-of-photonic-media-%E2%80%90-Model-enhancements-and-generalizations)
 
 40 mins
 

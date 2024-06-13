@@ -60,18 +60,18 @@ General update
      - Jonathan found a description as a LF pre-release platform for LF projects: https://docs.linuxfoundation.org/v2/project-control-center-pcc-pre-release  
    + Lyndon has distributed the draft of TIP MoU, with Scott Nicholas’ comments (TIP - LF MOU 3-29-2024)
    + Lyndon also distributed the summary of LF proposals regarding ONMI project future (ONMIProjectFuture_3april2024)
-     - Both contributions are available in https://github.com/OpenNetworkingFoundation/TAPI/tree/tapi-team-activities/TAPI-TEAM-ACTIVITIES/Contributions
+     - Both contributions are available in https://github.com/OpenNetworkingFoundation/TAPI/tree/tapi-team-activities/TAPI-TEAM-ACTIVITIES/ContributionsForDiscussions
    + Jonathan recalls that Lyndon is leaving Ciena, his role being moved to Nigel
      - Lyndon may anyway continue to collaborate
 
 
-2) [2.5.0 Review: approve draft patches](https://github.com/Open-Network-Models-and-Interfaces-ONMI/TAPI/discussions/579)
+2) [2.5.0 Review: approve draft patches](https://github.com/Open-Network-Models-and-Interfaces-ONMI/TAPI/wiki/Discussion-%E2%80%90-Bugs,-Patches)
 
  
 -------------------------------------------------------------------------------------
 **Discussion item 2**
 
-[Transceiver Model](https://github.com/Open-Network-Models-and-Interfaces-ONMI/TAPI/discussions/578)
+[Transceiver Model](https://github.com/Open-Network-Models-and-Interfaces-ONMI/TAPI/wiki/Discussion-%E2%80%90-Transceiver-Model)
 
 30 mins
 

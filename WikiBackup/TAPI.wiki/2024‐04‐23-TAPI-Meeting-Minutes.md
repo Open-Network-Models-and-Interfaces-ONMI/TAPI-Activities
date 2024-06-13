@@ -92,7 +92,7 @@ General update
 -------------------------------------------------------------------------------------
 **Discussion item 2**
 
-[Use Case 11a: Modification of service path - Connection inclusion/exclusion constraints](https://github.com/Open-Network-Models-and-Interfaces-ONMI/TAPI/discussions/580)
+[Use Case 11a: Modification of service path - Connection inclusion/exclusion constraints](https://github.com/Open-Network-Models-and-Interfaces-ONMI/TAPI/wiki/Discussion-%E2%80%90-Use-Case-11a-%E2%80%90-Modification-of-service-path-%E2%80%90-Connection-inclusion-exclusion-constraints)
 
 40 mins
 

@@ -155,3 +155,21 @@ Andrea shows the updated slides regarding the model of transceiver modes, from t
 Esther explains that in both IETF CCAMP and OpenConfig the transceiver function is described (instantiated) regardless it is configured or not, in other words it is described if the underlying equipment supports it.
 - Andrea recalls that TAPI model decouples the physical and logical models, and describes capabilities through dedicated structures referenced by NEP instances
   + Andrea will update the figures
+
+### [2024‐06‐11 TAPI Meeting Minutes](https://github.com/Open-Network-Models-and-Interfaces-ONMI/TAPI/wiki/2024%E2%80%9006%E2%80%9011-TAPI-Meeting-Minutes)
+
+Andrea shows the slides updated according to the discussion of last week.
+- There is a preliminary agreement on slide 3), to be further discussed with IETF representatives.
+
+### 1) Capabilities fully contained in the NEP instance:
+
+![](https://github.com/Open-Network-Models-and-Interfaces-ONMI/TAPI-Activities/blob/main/ContributionsForDiscussions/onmi2024.AM.002_TAPI_RIASlides1.jpg)
+
+### 2) Capabilities partly contained in the NEP instance:
+
+![](https://github.com/Open-Network-Models-and-Interfaces-ONMI/TAPI-Activities/blob/main/ContributionsForDiscussions/onmi2024.AM.002_TAPI_RIASlides2.jpg)
+
+### 3) Capabilities not contained in the NEP instance:
+
+![](https://github.com/Open-Network-Models-and-Interfaces-ONMI/TAPI-Activities/blob/main/ContributionsForDiscussions/onmi2024.AM.002_TAPI_RIASlides3.jpg)
+

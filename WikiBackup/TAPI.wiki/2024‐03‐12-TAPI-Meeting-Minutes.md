@@ -56,12 +56,12 @@ General update
    + Andrea will contact Kam to start planning the publication of TAPI at ITU-T
      - Explore a possible MoU also with ITU-T and MEF
 
-2) [Bugs, Patches](https://github.com/Open-Network-Models-and-Interfaces-ONMI/TAPI/discussions/579)
+2) [Bugs, Patches](https://github.com/Open-Network-Models-and-Interfaces-ONMI/TAPI/wiki/Discussion-%E2%80%90-Bugs,-Patches)
 
 -------------------------------------------------------------------------------------
 **Discussion item 2**
 
-[Transceiver Model](https://github.com/Open-Network-Models-and-Interfaces-ONMI/TAPI/discussions/578)
+[Transceiver Model](https://github.com/Open-Network-Models-and-Interfaces-ONMI/TAPI/wiki/Discussion-%E2%80%90-Transceiver-Model)
 
 70 mins
 

@@ -74,15 +74,15 @@ General update
        and that the Core IM project is now moved at ITU-T
     6) Regarding onmi-tst, a decision shall be taken regarding keeping the TST or just agree project moderators.
 
-2) [2.5.0 Review: approve draft patches](https://github.com/Open-Network-Models-and-Interfaces-ONMI/TAPI/discussions/579)
+2) [2.5.0 Review: approve draft patches](https://github.com/Open-Network-Models-and-Interfaces-ONMI/TAPI/wiki/Discussion-%E2%80%90-Bugs,-Patches)
 
-3) [Proposal to close all issues older than 2023](https://github.com/Open-Network-Models-and-Interfaces-ONMI/TAPI/discussions/579)
+3) [Proposal to close all issues older than 2023](https://github.com/Open-Network-Models-and-Interfaces-ONMI/TAPI/wiki/Discussion-%E2%80%90-Bugs,-Patches)
 
 
 -------------------------------------------------------------------------------------
 **Discussion item 2**
 
-[Transceiver Model](https://github.com/Open-Network-Models-and-Interfaces-ONMI/TAPI/discussions/578)
+[Transceiver Model](https://github.com/Open-Network-Models-and-Interfaces-ONMI/TAPI/wiki/Discussion-%E2%80%90-Transceiver-Model)
 
 30 mins
 

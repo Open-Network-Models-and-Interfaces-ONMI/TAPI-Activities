@@ -81,28 +81,28 @@ General update
 -------------------------------------------------------------------------------------
 **Discussion item 2**
 
-[Node - Device linkage](https://github.com/Open-Network-Models-and-Interfaces-ONMI/TAPI/discussions/583)
+[Node - Device linkage](https://github.com/Open-Network-Models-and-Interfaces-ONMI/TAPI/wiki/Discussion-%E2%80%90-Node-to-Device-linkage)
 
 20 mins
 
 -------------------------------------------------------------------------------------
 **Discussion item 3**
 
-[Navigation IETF <--> TAPI](https://github.com/Open-Network-Models-and-Interfaces-ONMI/TAPI/discussions/584)
+[Navigation IETF <--> TAPI](https://github.com/Open-Network-Models-and-Interfaces-ONMI/TAPI/wiki/Discussion-%E2%80%90-Navigation-IETF-%E2%80%90-TAPI)
 
 20 mins
 
 -------------------------------------------------------------------------------------
 **Discussion item 4**
 
-[Spotlight/snapshot stream to "get current data" e.g. on periodical time on selected monitors](https://github.com/Open-Network-Models-and-Interfaces-ONMI/TAPI/discussions/582)
+[Spotlight/snapshot stream to "get current data" e.g. on periodical time on selected monitors](https://github.com/Open-Network-Models-and-Interfaces-ONMI/TAPI/wiki/Discussion-%E2%80%90-Spotlight-snapshot-stream-to-get-current-data)
 
 30 mins
 
 -------------------------------------------------------------------------------------
 **Discussion item 5**
 
-[Use Case 11a: Modification of service path - Connection inclusion/exclusion constraints](https://github.com/Open-Network-Models-and-Interfaces-ONMI/TAPI/discussions/580)
+[Use Case 11a: Modification of service path - Connection inclusion/exclusion constraints](https://github.com/Open-Network-Models-and-Interfaces-ONMI/TAPI/wiki/Discussion-%E2%80%90-Use-Case-11a-%E2%80%90-Modification-of-service-path-%E2%80%90-Connection-inclusion-exclusion-constraints)
 
 30 mins
 

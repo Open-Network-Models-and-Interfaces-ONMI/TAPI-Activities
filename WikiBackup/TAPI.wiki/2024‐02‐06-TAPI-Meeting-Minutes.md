@@ -60,21 +60,21 @@ General update
 -------------------------------------------------------------------------------------
 **Discussion item 2**
 
-[Path computation: Path as routing constraint](https://github.com/Open-Network-Models-and-Interfaces-ONMI/TAPI/discussions/577)
+[Path computation: Path as routing constraint](https://github.com/Open-Network-Models-and-Interfaces-ONMI/TAPI/wiki/Discussion-%E2%80%90-Path-computation-%E2%80%90-Path-as-routing-constraint)
 
 40 mins
 
 -------------------------------------------------------------------------------------
 **Discussion item 3**
 
-[Photonic Model: fix the transceiver provisioning model](https://github.com/Open-Network-Models-and-Interfaces-ONMI/TAPI/discussions/578)
+[Photonic Model: fix the transceiver provisioning model](https://github.com/Open-Network-Models-and-Interfaces-ONMI/TAPI/wiki/Discussion-%E2%80%90-Transceiver-Model)
 
 30 mins
 
 -------------------------------------------------------------------------------------
 **Discussion item 4**
 
-[Continue the discussion on digital payload of photonic media](https://github.com/Open-Network-Models-and-Interfaces-ONMI/TAPI/discussions/575)
+[Continue the discussion on digital payload of photonic media](https://github.com/Open-Network-Models-and-Interfaces-ONMI/TAPI/wiki/Discussion-%E2%80%90-Digital-payload-of-photonic-media-%E2%80%90-Model-enhancements-and-generalizations)
 
 30 mins
 

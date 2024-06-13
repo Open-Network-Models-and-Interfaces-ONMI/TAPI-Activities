@@ -51,7 +51,7 @@ Jonathan proposes to discuss the following items at next TAPI call:
 -------------------------------------------------------------------------------------
 **Discussion item 2**
 
-[RPC vs. Data API discussion](https://github.com/Open-Network-Models-and-Interfaces-ONMI/TAPI/discussions/571)
+[RPC vs. Data API discussion](https://github.com/Open-Network-Models-and-Interfaces-ONMI/TAPI/wiki/Discussion-%E2%80%90-RPC-vs-Data-API)
 
 30 mins
 

@@ -71,14 +71,14 @@ General update
 -------------------------------------------------------------------------------------
 **Discussion item 2**
 
-[Spotlight/snapshot stream to "get current data" e.g. on periodical time on selected monitors](https://github.com/Open-Network-Models-and-Interfaces-ONMI/TAPI/discussions/582)
+[Spotlight/snapshot stream to "get current data" e.g. on periodical time on selected monitors](https://github.com/Open-Network-Models-and-Interfaces-ONMI/TAPI/wiki/Discussion-%E2%80%90-Spotlight-snapshot-stream-to-get-current-data)
 
 40 mins
 
 -------------------------------------------------------------------------------------
 **Discussion item 3**
 
-[Use Case 11a: Modification of service path - Connection inclusion/exclusion constraints](https://github.com/Open-Network-Models-and-Interfaces-ONMI/TAPI/discussions/580)
+[Use Case 11a: Modification of service path - Connection inclusion/exclusion constraints](https://github.com/Open-Network-Models-and-Interfaces-ONMI/TAPI/wiki/Discussion-%E2%80%90-Use-Case-11a-%E2%80%90-Modification-of-service-path-%E2%80%90-Connection-inclusion-exclusion-constraints)
 
 60 mins
 

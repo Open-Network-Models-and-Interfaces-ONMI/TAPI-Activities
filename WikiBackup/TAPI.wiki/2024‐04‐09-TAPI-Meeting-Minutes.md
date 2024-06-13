@@ -69,13 +69,13 @@ General update
 	     - major role being the TAPI release approval
 
 
-2) [2.5.1 Review and final approval](https://github.com/Open-Network-Models-and-Interfaces-ONMI/TAPI/discussions/579)
+2) [2.5.1 Review and final approval](https://github.com/Open-Network-Models-and-Interfaces-ONMI/TAPI/wiki/Discussion-%E2%80%90-Bugs,-Patches)
 
  
 -------------------------------------------------------------------------------------
 **Discussion item 2**
 
-[Use Case 11a: Modification of service path - Connection inclusion/exclusion constraints](https://github.com/Open-Network-Models-and-Interfaces-ONMI/TAPI/discussions/580)
+[Use Case 11a: Modification of service path - Connection inclusion/exclusion constraints](https://github.com/Open-Network-Models-and-Interfaces-ONMI/TAPI/wiki/Discussion-%E2%80%90-Use-Case-11a-%E2%80%90-Modification-of-service-path-%E2%80%90-Connection-inclusion-exclusion-constraints)
 
 20 mins
 
@@ -83,7 +83,7 @@ General update
 -------------------------------------------------------------------------------------
 **Discussion item 3**
 
-[Use Case UC 11b: Modification of service nominal route - Unidirectional switching of bidirectional service/connection](https://github.com/Open-Network-Models-and-Interfaces-ONMI/TAPI/discussions/581)
+[Use Case UC 11b: Modification of service nominal route - Unidirectional switching of bidirectional service/connection](https://github.com/Open-Network-Models-and-Interfaces-ONMI/TAPI/wiki/Discussion-%E2%80%90-Use-Case-UC-11b-Modification-of-service-nominal-route-%E2%80%90-Unidirectional-switching-of-bidirectional-service)
 
 10 mins
 

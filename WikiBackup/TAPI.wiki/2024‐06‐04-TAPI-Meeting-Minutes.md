@@ -79,21 +79,21 @@ General update
 -------------------------------------------------------------------------------------
 **Discussion item 2**
 
-[Node - Device linkage](https://github.com/Open-Network-Models-and-Interfaces-ONMI/TAPI/discussions/583)
+[Node - Device linkage](https://github.com/Open-Network-Models-and-Interfaces-ONMI/TAPI/wiki/Discussion-%E2%80%90-Node-to-Device-linkage)
 
 10 mins
 
 -------------------------------------------------------------------------------------
 **Discussion item 3**
 
-[Navigation IETF <--> TAPI](https://github.com/Open-Network-Models-and-Interfaces-ONMI/TAPI/discussions/584)
+[Navigation IETF <--> TAPI](https://github.com/Open-Network-Models-and-Interfaces-ONMI/TAPI/wiki/Discussion-%E2%80%90-Navigation-IETF-%E2%80%90-TAPI)
 
 20 mins
 
 -------------------------------------------------------------------------------------
 **Discussion item 4**
 
-[Transceiver Model](https://github.com/Open-Network-Models-and-Interfaces-ONMI/TAPI/discussions/578)
+[Transceiver Model](https://github.com/Open-Network-Models-and-Interfaces-ONMI/TAPI/wiki/Discussion-%E2%80%90-Transceiver-Model)
 
 30 mins
 

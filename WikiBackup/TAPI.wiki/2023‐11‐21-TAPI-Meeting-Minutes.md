@@ -45,14 +45,14 @@ General update
         + Andrea will do
      - Regarding the Testimonial Quotes, Esther will check whether to provide an updated statement
 
-3) [2.6.0 plan](https://github.com/Open-Network-Models-and-Interfaces-ONMI/TAPI/discussions/573)
+3) [2.6.0 plan](https://github.com/Open-Network-Models-and-Interfaces-ONMI/TAPI/wiki/Discussion-%E2%80%90-Plan-for-next-release)
 
 
 -------------------------------------------------------------------------------------
 
 **Discussion item 2**
 
-[UNI model evolution](https://github.com/Open-Network-Models-and-Interfaces-ONMI/TAPI/discussions/574)
+[UNI model evolution](https://github.com/Open-Network-Models-and-Interfaces-ONMI/TAPI/wiki/Discussion-%E2%80%90-UNI-Model-Evolution-%E2%80%90-Multi-technology-UNI)
 
 60 mins
 
