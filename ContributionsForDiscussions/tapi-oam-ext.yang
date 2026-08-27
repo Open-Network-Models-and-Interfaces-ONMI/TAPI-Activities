@@ -1,0 +1,114 @@
+module tapi-oam-ext {
+    namespace "urn:onf:otcc:yang:tapi-oam-ext";
+    prefix tapi-oam-ext;
+    import tapi-oam {
+        prefix tapi-oam;
+    }
+    import tapi-common {
+        prefix tapi-common;
+    }
+    import tapi-gnmi-streaming {
+        prefix tapi-gnmi-streaming;
+    }
+    organization "ONF OTCC (Open Transport Configuration & Control) Project";
+    contact "Roshan Joyce <mailto:roshan.joyce@fujitsu.com>";
+    description "This module contains TAPI OAM Extensions proposed for adoption in LF TAPI.";
+
+    revision 2026-08-27 {
+        description "Initial version of TAPI OAM Extensions module.
+            - Added PM_NO_NORMALIZED_TYPE identity for non-standard PM measurements
+            - Added OAM_JOB_TYPE_MONITOR_ALL for cross-technology monitoring
+            - Added METRIC_VALUE_TYPE_INSTANT for instantaneous measurements
+            - Added generic-pm-value-representation grouping for flexible PM reporting
+            - Augmented CEP, MEP, and MIP PM data history with extended PM parameters";
+        reference "ONF TAPI v4.1";
+    }
+
+    /****************************
+    * package identity-extensions
+    ****************************/
+
+    identity PM_NO_NORMALIZED_TYPE {
+        base tapi-common:PM;
+        description "A PM identity that can be used when reporting measurement data that cannot
+            be directly mapped to any standard PM identity defined in TAPI.";
+    }
+
+    identity OAM_JOB_TYPE_MONITOR_ALL {
+        base tapi-oam:OAM_JOB_TYPE;
+        description "Cross-technology monitoring job type. This job type allows a client to collect 
+            PM data across multiple technology types (e.g., photonic, OTN, Ethernet) within a single 
+            OAM job service request. The server will collect all applicable PM parameters for each 
+            monitored resource based on its technology layer and the pm-parameter-names provided.";
+    }
+    
+    identity METRIC_VALUE_TYPE_INSTANT {
+        base tapi-common:METRIC_VALUE_TYPE;
+        description "Instantaneous value type. Represents an instantaneous measurement of a PM parameter 
+            taken at a specific point in time, as opposed to aggregated values (average, min, max) over 
+            a time interval. Used for current PM queries where start-time equals end-time.";
+    }
+
+    /*************************
+    * grouping definitions
+    *************************/
+    grouping generic-pm-value-representation {
+        /* 
+         * This grouping is used to represent PM values in a flexible way.
+         * It includes the standard PM parameter and additional fields for native measurement type,
+         * relative position of measurement, and direction of measured signal.
+         */
+        uses tapi-common:pm-parameter;
+        
+        leaf native-measurement-type {
+            type string;
+            config false;
+            description "The name used for the type of measurement at the sources/originator of the measurement.
+                CONDITION: Mandatory when the pm-parameter-name is set as PM_NO_NORMALIZED_TYPE.";
+        }
+
+        leaf relative-position-of-measurement {
+            type tapi-gnmi-streaming:relative-position;
+            config false;
+            description "Indicates whether the measurement was taken for signal/properties at the resource point against 
+                which it is reported or at a remote location related to the resource identified in the report.
+                The default is NEAR_END. The property is conditional and must be stated unless the value is NEAR_END. 
+                CONDITION: Mandatory where the value is not NEAR_END.";
+        }
+        leaf direction-of-measured-signal {
+            type tapi-gnmi-streaming:direction-of-measured-signal;
+            config false;
+            description "Relevant to measurements related to signal flow. Indicates the flow which the measurement relates to. 
+                The property is conditional and need not be stated where the measurement type clearly indicates the directionality.
+                The property intentionally has no default as the absence of the property means interpret using measurement type.
+                CONDITION: Mandatory as identified in the description above.";
+        }
+        
+    }
+    /*************************
+    * package augmentations
+    *************************/
+    augment "/tapi-common:context/tapi-oam:oam-context/tapi-oam:cep-pm-data/tapi-oam:history-data" {
+        list pm-parameter {
+            uses generic-pm-value-representation;
+            description "The PM metrics and their collected values.";
+        }
+        description "Augments history-data in cep-pm-data with pm-parameter list for flexible PM reporting.";
+    }
+    
+    augment "/tapi-common:context/tapi-oam:oam-context/tapi-oam:mep-pm-data/tapi-oam:history-data" {
+        list pm-parameter {
+            uses generic-pm-value-representation;
+            description "The PM metrics and their collected values.";
+        }
+        description "Augments history-data in mep-pm-data with pm-parameter list for flexible PM reporting.";
+    }
+    
+    augment "/tapi-common:context/tapi-oam:oam-context/tapi-oam:mip-pm-data/tapi-oam:history-data" {
+        list pm-parameter {
+            uses generic-pm-value-representation;
+            description "The PM metrics and their collected values.";
+        }
+        description "Augments history-data in mip-pm-data with pm-parameter list for flexible PM reporting.";
+    }
+}
