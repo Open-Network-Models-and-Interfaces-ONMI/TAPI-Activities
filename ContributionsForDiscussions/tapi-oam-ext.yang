@@ -42,11 +42,13 @@ module tapi-oam-ext {
             monitored resource based on its technology layer and the pm-parameter-names provided.";
     }
     
-    identity METRIC_VALUE_TYPE_INSTANT {
+    identity METRIC_VALUE_TYPE_ABSOLUTE {
         base tapi-common:METRIC_VALUE_TYPE;
-        description "Instantaneous value type. Represents an instantaneous measurement of a PM parameter 
-            taken at a specific point in time, as opposed to aggregated values (average, min, max) over 
-            a time interval. Used for current PM queries where start-time equals end-time.";
+        description "Absolute value type. Represents the actual measured or accumulated value 
+            for a PM parameter over a time period, as opposed to derived statistics (average, min, max).
+            For counter-based metrics like errored seconds, this is the total count accumulated 
+            during the measurement interval. For instantaneous metrics, this is the measured value 
+            at a specific point in time.";
     }
 
     /*************************
