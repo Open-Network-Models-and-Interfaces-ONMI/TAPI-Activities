@@ -510,4 +510,14 @@ module tapi-oam-ext {
         base tapi-common:PM;
         description "PSU Received Current. Power supply unit input current.";
     }
+
+    identity PM_DELAY {
+        base tapi-common:PM;
+        description "Number of frames between a DMValue toggle event and the received DMp signal value toggle event";
+    }
+
+    identity PM_DELAY_TIME {
+        base tapi-common:PM;
+        description "Time taken for a DMValue toggle event to travel and receive as DMp signal value toggle event";
+    }
 }
