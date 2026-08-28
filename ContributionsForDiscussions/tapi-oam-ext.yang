@@ -50,6 +50,7 @@ module tapi-oam-ext {
                 The default is NEAR_END. The property is conditional and must be stated unless the value is NEAR_END. 
                 CONDITION: Mandatory where the value is not NEAR_END.";
         }
+
         leaf direction-of-measured-signal {
             type tapi-gnmi-streaming:direction-of-measured-signal;
             config false;
@@ -58,8 +59,8 @@ module tapi-oam-ext {
                 The property intentionally has no default as the absence of the property means interpret using measurement type.
                 CONDITION: Mandatory as identified in the description above.";
         }
-        
     }
+
     /*************************
     * package augmentations
     *************************/
@@ -86,7 +87,6 @@ module tapi-oam-ext {
         }
         description "Augments history-data in mip-pm-data with pm-parameter list for flexible PM reporting.";
     }
-
     
     /****************************
     * package identity-extensions
