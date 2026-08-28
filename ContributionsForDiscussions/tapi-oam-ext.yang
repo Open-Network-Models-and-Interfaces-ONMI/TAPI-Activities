@@ -17,7 +17,7 @@ module tapi-oam-ext {
     revision 2026-08-27 {
         description "Initial version of TAPI OAM Extensions module.
             - Added generic-pm-value-representation grouping for flexible PM reporting
-            - Augmented CEP, MEP, and MIP PM data history with extended PM parameters"
+            - Augmented CEP, MEP, and MIP PM data history with extended PM parameters
             - Added OAM_JOB_TYPE_MONITOR_ALL for cross-technology monitoring
             - Added METRIC_VALUE_TYPE_ABSOLUTE for absolute value (not derived statistics) measurements
             - Added PM_NO_NORMALIZED_TYPE identity for non-standard PM measurements
