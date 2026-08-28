@@ -16,39 +16,12 @@ module tapi-oam-ext {
 
     revision 2026-08-27 {
         description "Initial version of TAPI OAM Extensions module.
-            - Added PM_NO_NORMALIZED_TYPE identity for non-standard PM measurements
-            - Added OAM_JOB_TYPE_MONITOR_ALL for cross-technology monitoring
-            - Added METRIC_VALUE_TYPE_INSTANT for instantaneous measurements
             - Added generic-pm-value-representation grouping for flexible PM reporting
-            - Augmented CEP, MEP, and MIP PM data history with extended PM parameters";
-        reference "ONF TAPI v4.1";
-    }
-
-    /****************************
-    * package identity-extensions
-    ****************************/
-
-    identity PM_NO_NORMALIZED_TYPE {
-        base tapi-common:PM;
-        description "A PM identity that can be used when reporting measurement data that cannot
-            be directly mapped to any standard PM identity defined in TAPI.";
-    }
-
-    identity OAM_JOB_TYPE_MONITOR_ALL {
-        base tapi-oam:OAM_JOB_TYPE;
-        description "Cross-technology monitoring job type. This job type allows a client to collect 
-            PM data across multiple technology types (e.g., photonic, OTN, Ethernet) within a single 
-            OAM job service request. The server will collect all applicable PM parameters for each 
-            monitored resource based on its technology layer and the pm-parameter-names provided.";
-    }
-    
-    identity METRIC_VALUE_TYPE_ABSOLUTE {
-        base tapi-common:METRIC_VALUE_TYPE;
-        description "Absolute value type. Represents the actual measured or accumulated value 
-            for a PM parameter over a time period, as opposed to derived statistics (average, min, max).
-            For counter-based metrics like errored seconds, this is the total count accumulated 
-            during the measurement interval. For instantaneous metrics, this is the measured value 
-            at a specific point in time.";
+            - Augmented CEP, MEP, and MIP PM data history with extended PM parameters"
+            - Added OAM_JOB_TYPE_MONITOR_ALL for cross-technology monitoring
+            - Added METRIC_VALUE_TYPE_ABSOLUTE for absolute value (not derived statistics) measurements
+            - Added PM_NO_NORMALIZED_TYPE identity for non-standard PM measurements
+            - Added new PM identities corresponding to pm-names-enum values from OpenROADM YANG";
     }
 
     /*************************
@@ -112,5 +85,429 @@ module tapi-oam-ext {
             description "The PM metrics and their collected values.";
         }
         description "Augments history-data in mip-pm-data with pm-parameter list for flexible PM reporting.";
+    }
+
+    
+    /****************************
+    * package identity-extensions
+    ****************************/
+
+    identity OAM_JOB_TYPE_MONITOR_ALL {
+        base tapi-oam:OAM_JOB_TYPE;
+        description "Cross-technology monitoring job type. This job type allows a client to collect 
+            PM data across multiple technology types (e.g., photonic, OTN, Ethernet) within a single 
+            OAM job service request. The server will collect all applicable PM parameters for each 
+            monitored resource based on its technology layer and the pm-parameter-names provided.";
+    }
+    
+    identity METRIC_VALUE_TYPE_ABSOLUTE {
+        base tapi-common:METRIC_VALUE_TYPE;
+        description "Absolute value type. Represents the actual measured or accumulated value 
+            for a PM parameter over a time period, as opposed to derived statistics (average, min, max).
+            For counter-based metrics like errored seconds, this is the total count accumulated 
+            during the measurement interval. For instantaneous metrics, this is the measured value 
+            at a specific point in time.";
+    }
+
+    identity PM_NO_NORMALIZED_TYPE {
+        base tapi-common:PM;
+        description "A PM identity that can be used when reporting measurement data that cannot
+            be directly mapped to any standard PM identity defined in TAPI.";
+    }
+
+    /**
+     * Following are new PM identities that correspond to pm-names-enum values from 
+     * https://github.com/OpenROADM/OpenROADM_MSA_Public/blob/17.1.0/model/Common/org-openroadm-pm-types.yang
+     * that are missing now in TAPI.
+     */
+    identity PM_CV {
+        base tapi-common:PM;
+        description "Code Violations. Counts BIP (Bit Interleaved Parity) errors detected in the signal.";
+    }
+
+    identity PM_ES {
+        base tapi-common:PM;
+        description "Errored Seconds. Count of one-second intervals containing at least one error event.";
+        reference "ITU-T G.7710 section 10.2.1";
+    }
+
+    identity PM_BIAE {
+        base tapi-common:PM;
+        description "Backward Incoming Alignment Error. Seconds during which backward incoming alignment 
+            errors were detected in the tandem connection monitoring overhead.";
+        reference "ITU-T G.798";
+    }
+
+    identity PM_IAE {
+        base tapi-common:PM;
+        description "Incoming Alignment Error. Seconds during which incoming alignment errors were 
+            detected in the tandem connection monitoring overhead.";
+        reference "ITU-T G.798";
+    }
+
+    identity PM_FEC_UNCORRECTED_CODEWORDS {
+        base tapi-common:PM;
+        description "FEC Uncorrected Codewords. Count of Forward Error Correction codewords that 
+            could not be corrected.";
+    }
+
+    identity PM_LLDP_FRAMES {
+        base tapi-common:PM;
+        description "LLDP Frames. Count of Link Layer Discovery Protocol frames received on the interface.";
+    }
+
+    identity PM_LFS {
+        base tapi-common:PM;
+        description "Local Fault Seconds. Count of seconds during which local fault conditions were detected.";
+    }
+
+    identity PM_RFS {
+        base tapi-common:PM;
+        description "Remote Fault Seconds. Count of seconds during which remote fault conditions were detected.";
+    }
+
+    identity PM_RX_ERRORS {
+        base tapi-common:PM;
+        description "Receive Errors. Count of errors detected on received frames or packets.";
+    }
+
+    identity PM_TX_ERRORS {
+        base tapi-common:PM;
+        description "Transmit Errors. Count of errors detected during frame or packet transmission.";
+    }
+
+    identity PM_ETH_BROADCAST_PACKETS {
+        base tapi-common:PM;
+        description "Ethernet Broadcast Packets. Count of broadcast packets transmitted or received.";
+    }
+
+    identity PM_ETH_DROP_EVENTS {
+        base tapi-common:PM;
+        description "Ethernet Drop Events. Count of packet drop events due to resource limitations.";
+    }
+
+    identity PM_ETH_FRAGMENTS {
+        base tapi-common:PM;
+        description "Ethernet Fragments. Count of frame fragments smaller than minimum frame size.";
+    }
+
+    identity PM_ETH_FCS_ERRORS {
+        base tapi-common:PM;
+        description "Ethernet Frame Check Sequence Errors. Count of frames with invalid FCS.";
+    }
+
+    identity PM_ETH_FRAMES_1024_TO_1518_OCTETS {
+        base tapi-common:PM;
+        description "Ethernet Frames 1024-1518 Octets. Count of frames sized between 1024 and 1518 octets.";
+    }
+
+    identity PM_ETH_FRAMES_128_TO_255_OCTETS {
+        base tapi-common:PM;
+        description "Ethernet Frames 128-255 Octets. Count of frames sized between 128 and 255 octets.";
+    }
+
+    identity PM_ETH_FRAMES_256_TO_511_OCTETS {
+        base tapi-common:PM;
+        description "Ethernet Frames 256-511 Octets. Count of frames sized between 256 and 511 octets.";
+    }
+
+    identity PM_ETH_FRAMES_512_TO_1023_OCTETS {
+        base tapi-common:PM;
+        description "Ethernet Frames 512-1023 Octets. Count of frames sized between 512 and 1023 octets.";
+    }
+
+    identity PM_ETH_FRAMES_64_OCTETS {
+        base tapi-common:PM;
+        description "Ethernet Frames 64 Octets. Count of frames exactly 64 octets in size.";
+    }
+
+    identity PM_ETH_FRAMES_65_TO_127_OCTETS {
+        base tapi-common:PM;
+        description "Ethernet Frames 65-127 Octets. Count of frames sized between 65 and 127 octets.";
+    }
+
+    identity PM_ETH_GOOD_FRAMES {
+        base tapi-common:PM;
+        description "Ethernet Good Frames. Count of frames received or transmitted without errors.";
+    }
+
+    identity PM_ETH_GOOD_OCTETS {
+        base tapi-common:PM;
+        description "Ethernet Good Octets. Count of octets in frames received or transmitted without errors.";
+    }
+
+    identity PM_ETH_JABBER_FRAMES {
+        base tapi-common:PM;
+        description "Ethernet Jabber Frames. Count of oversized frames with invalid FCS.";
+    }
+
+    identity PM_ETH_MULTICAST_PACKETS {
+        base tapi-common:PM;
+        description "Ethernet Multicast Packets. Count of multicast packets transmitted or received.";
+    }
+
+    identity PM_ETH_OCTETS {
+        base tapi-common:PM;
+        description "Ethernet Octets. Total count of octets transmitted or received.";
+    }
+
+    identity PM_ETH_OVERSIZE_FRAMES {
+        base tapi-common:PM;
+        description "Ethernet Oversize Frames. Count of frames exceeding maximum frame size.";
+    }
+
+    identity PM_ETH_PACKETS {
+        base tapi-common:PM;
+        description "Ethernet Packets. Total count of packets transmitted or received.";
+    }
+
+    identity PM_ETH_PAUSE_FRAMES {
+        base tapi-common:PM;
+        description "Ethernet Pause Frames. Count of flow control pause frames.";
+    }
+
+    identity PM_ETH_UNICAST_PACKETS {
+        base tapi-common:PM;
+        description "Ethernet Unicast Packets. Count of unicast packets transmitted or received.";
+    }
+
+    identity PM_ETH_UNDERSIZE_FRAMES {
+        base tapi-common:PM;
+        description "Ethernet Undersize Frames. Count of frames smaller than minimum frame size with valid FCS.";
+    }
+
+    identity PM_CPU_USAGE {
+        base tapi-common:PM;
+        description "CPU Usage. Processor utilization as a percentage of total capacity.";
+    }
+
+    identity PM_MEMORY_USAGE {
+        base tapi-common:PM;
+        description "Memory Usage. Memory utilization as a percentage of total capacity.";
+    }
+
+    identity PM_POWER_CONSUMPTION {
+        base tapi-common:PM;
+        description "Power Consumption. Electrical power consumed by the equipment.";
+    }
+
+    identity PM_TEMPERATURE {
+        base tapi-common:PM;
+        description "Temperature. Equipment or component temperature measurement.";
+    }
+
+    identity PM_DECRYPTION_ES {
+        base tapi-common:PM;
+        description "Decryption Errored Seconds. Count of seconds during which decryption errors occurred.";
+    }
+
+    identity PM_ENCRYPTION_ES {
+        base tapi-common:PM;
+        description "Encryption Errored Seconds. Count of seconds during which encryption errors occurred.";
+    }
+
+    identity PM_DECRYPTED_FRAMES {
+        base tapi-common:PM;
+        description "Decrypted Frames. Count of frames successfully decrypted.";
+    }
+
+    identity PM_DECRYPTION_DROPPED_FRAMES {
+        base tapi-common:PM;
+        description "Decryption Dropped Frames. Count of frames dropped due to decryption errors.";
+    }
+
+    identity PM_ENCRYPTED_FRAMES {
+        base tapi-common:PM;
+        description "Encrypted Frames. Count of frames successfully encrypted.";
+    }
+
+    identity PM_SD_FEC_CORRECTED_BITS {
+        base tapi-common:PM;
+        description "Soft-Decision FEC Corrected Bits. Count of bits corrected by soft-decision 
+            Forward Error Correction algorithms.";
+    }
+
+    identity PM_LASER_BIAS_CURRENT {
+        base tapi-common:PM;
+        description "Laser Bias Current. Electrical current supplied to the laser diode.";
+    }
+
+    identity PM_OSNR {
+        base tapi-common:PM;
+        description "Optical Signal-to-Noise Ratio. Ratio of signal power to noise power in the optical domain.";
+    }
+
+    identity PM_PDL {
+        base tapi-common:PM;
+        description "Polarization Dependent Loss. Variation in optical loss due to polarization state.";
+    }
+
+    identity PM_OPT_RETURN_LOSS {
+        base tapi-common:PM;
+        description "Optical Return Loss. Ratio of reflected optical power to incident power.";
+    }
+
+    identity PM_OPT_INTERCONNECT_LOSS {
+        base tapi-common:PM;
+        description "Optical Interconnect Loss. Signal loss on internal optical interconnections within ROADM equipment.";
+    }
+
+    identity PM_OPTICAL_POWER_TRANSMIT_OMS {
+        base tapi-common:PM;
+        description "Optical Power Transmit OMS. Total transmitted optical power for Optical Multiplex Section.";
+    }
+
+    identity PM_OPTICAL_POWER_RECEIVE_OMS {
+        base tapi-common:PM;
+        description "Optical Power Receive OMS. Total received optical power for Optical Multiplex Section.";
+    }
+
+    identity PM_PROTECTION_SWITCH_COUNT {
+        base tapi-common:PM;
+        description "Protection Switch Count. Number of protection switching events.";
+    }
+
+    identity PM_PROTECTION_SWITCH_DURATION {
+        base tapi-common:PM;
+        description "Protection Switch Duration. Total time spent in protection switched state.";
+    }
+
+    identity PM_GFP_CMF_FRAMES {
+        base tapi-common:PM;
+        description "GFP Client Management Frames. Count of Generic Framing Procedure client management frames.";
+        reference "ITU-T G.7041";
+    }
+
+    identity PM_GFP_ERRORED_FRAMES {
+        base tapi-common:PM;
+        description "GFP Errored Frames. Count of Generic Framing Procedure frames with errors.";
+        reference "ITU-T G.7041";
+    }
+
+    identity PM_GFP_ES {
+        base tapi-common:PM;
+        description "GFP Errored Seconds. Count of seconds with Generic Framing Procedure frame errors or defects.";
+        reference "ITU-T G.7041";
+    }
+
+    identity PM_DEFECT_SECONDS {
+        base tapi-common:PM;
+        description "Defect Seconds. Count of seconds during which signal defects were present.";
+    }
+
+    identity PM_BER {
+        base tapi-common:PM;
+        description "Bit Error Rate. Ratio of errored bits to total transmitted bits.";
+    }
+
+    identity PM_BIP_ERRORS {
+        base tapi-common:PM;
+        description "Bit Interleaved Parity Errors. Count of BIP error events detected.";
+    }
+
+    identity PM_ETH_DISCARDS {
+        base tapi-common:PM;
+        description "Ethernet Discards. Count of frames or packets intentionally discarded.";
+    }
+
+    identity PM_ETH_ERRORED_FRAMES {
+        base tapi-common:PM;
+        description "Ethernet Errored Frames. Count of frames received or transmitted with errors.";
+    }
+
+    identity PM_ETH_INPUT_FRAMES {
+        base tapi-common:PM;
+        description "Ethernet Input Frames. Total count of frames received on the interface.";
+    }
+
+    identity PM_ETH_INPUT_ERRORED_FRAMES {
+        base tapi-common:PM;
+        description "Ethernet Input Errored Frames. Count of errored frames received on the interface.";
+    }
+
+    identity PM_ETH_OUTPUT_FRAMES {
+        base tapi-common:PM;
+        description "Ethernet Output Frames. Total count of frames transmitted on the interface.";
+    }
+
+    identity PM_ETH_PARTIAL_RATE_DISCARDS {
+        base tapi-common:PM;
+        description "Ethernet Partial Rate Discards. Count of packets discarded due to rate limiting or policing 
+            for subrate Ethernet services.";
+    }
+
+    identity PM_EVM {
+        base tapi-common:PM;
+        description "Error Vector Magnitude. Measure of modulation quality in coherent optical systems.";
+    }
+
+    identity PM_Q_VALUE {
+        base tapi-common:PM;
+        description "Q-Value. Signal quality metric representing the signal-to-noise ratio in linear units.";
+    }
+
+    identity PM_SNR {
+        base tapi-common:PM;
+        description "Signal-to-Noise Ratio. Ratio of signal power to noise power.";
+    }
+
+    identity PM_SPAN_LOSS {
+        base tapi-common:PM;
+        description "Span Loss. Total optical power loss across a fiber span.";
+    }
+
+    identity PM_SPAN_LOSS_VARIATION {
+        base tapi-common:PM;
+        description "Span Loss Variation. Change in span loss over time.";
+    }
+
+    identity PM_REFLECTION_POWER {
+        base tapi-common:PM;
+        description "Reflection Power. Optical power reflected back from connectors or fiber discontinuities.";
+    }
+
+    identity PM_STATE_OF_POLARIZATION {
+        base tapi-common:PM;
+        description "State of Polarization. Characterization of the polarization state of the optical signal.";
+    }
+
+    identity PM_PHASE_NOISE {
+        base tapi-common:PM;
+        description "Phase Noise. Random fluctuations in the phase of the optical carrier signal.";
+    }
+
+    identity PM_PASS_BAND_3_DB {
+        base tapi-common:PM;
+        description "Pass Band 3dB. Optical filter bandwidth at 3dB attenuation point.";
+    }
+
+    identity PM_PASS_BAND_0_5_DB {
+        base tapi-common:PM;
+        description "Pass Band 0.5dB. Optical filter bandwidth at 0.5dB attenuation point.";
+    }
+
+    identity PM_PSU_TRANSMITTING_VOLTAGE {
+        base tapi-common:PM;
+        description "PSU Transmitting Voltage. Power supply unit output voltage during transmission.";
+    }
+
+    identity PM_PSU_TRANSMITTING_CURRENT {
+        base tapi-common:PM;
+        description "PSU Transmitting Current. Power supply unit output current during transmission.";
+    }
+
+    identity PM_PSU_TRANSMITTING_POWER {
+        base tapi-common:PM;
+        description "PSU Transmitting Power. Power supply unit output power during transmission.";
+    }
+
+    identity PM_PSU_RECEIVED_VOLTAGE {
+        base tapi-common:PM;
+        description "PSU Received Voltage. Power supply unit input voltage.";
+    }
+
+    identity PM_PSU_RECEIVED_CURRENT {
+        base tapi-common:PM;
+        description "PSU Received Current. Power supply unit input current.";
     }
 }
